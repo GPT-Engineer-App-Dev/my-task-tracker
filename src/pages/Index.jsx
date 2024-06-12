@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, VStack, HStack, Input, Button, Checkbox, Text, IconButton } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [tasks, setTasks] = useState([]);
@@ -55,6 +56,11 @@ const Index = () => {
             </HStack>
           ))}
         </VStack>
+        <Link to="/about-us">
+          <Button colorScheme="teal" variant="link">
+            About Us
+          </Button>
+        </Link>
       </VStack>
     </Container>
   );
